@@ -104,11 +104,14 @@ const calculateShipping = function () {
 
 /////////////////////////////////////////CART-VALIDATE-INPUTS TASK/////////////////////////////////////////
 const validateInputs = function (productName, price, quantity) {
-  if(!(isNaN(productName)) || isNaN(price) || isNaN(quantity)) {
-    return false;
-  }else{
-    return true;
+  if(!(productName === "" || price === "" || quantity === "")) {
+    if (!(isNaN(productName)) || isNaN(price) || isNaN(quantity)) {
+      return false;
+    } else {
+      return true;
+    }
   }
+  return false;
 };
 /////////////////////////////////////////CART-VALIDATE-INPUTS TASK/////////////////////////////////////////
 
