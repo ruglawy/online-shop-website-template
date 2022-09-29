@@ -102,7 +102,7 @@ const calculateShipping = function () {
   return Math.round(calculateSubTotal() * 0.1);
 };
 
-/////////////////////////////////////////CART-VALIDATE-INPUTS TASK/////////////////////////////////////////
+/////////////////////////////////////////CART-VALIDATE-INPUTS TASK START/////////////////////////////////////////
 const validateInputs = function (productName, price, quantity) {
   if(!(productName === "" || price === "" || quantity === "")) {
     if (!(isNaN(productName)) || isNaN(price) || isNaN(quantity)) {
@@ -113,7 +113,7 @@ const validateInputs = function (productName, price, quantity) {
   }
   return false;
 };
-/////////////////////////////////////////CART-VALIDATE-INPUTS TASK/////////////////////////////////////////
+/////////////////////////////////////////CART-VALIDATE-INPUTS TASK END/////////////////////////////////////////
 
 const decQuantity = function (i) {
   if (products[i].quantity > 1) {
