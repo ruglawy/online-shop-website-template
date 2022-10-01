@@ -109,10 +109,12 @@ const isEmptyOrNull = function(str) {
 
 const validateInputs = function (productName, price, quantity) {
   if(!(isEmptyOrNull(productName) || isEmptyOrNull(price) || isEmptyOrNull(quantity))) {
-    if (!(isNaN(productName)) || isNaN(price) || isNaN(quantity)) {
-      return false;
-    } else {
-      return true;
+    if (!(!(isNaN(productName)) || isNaN(price) || isNaN(quantity))) {
+      if(price < 0 || quantity <= 0) {
+        return false;
+      } else {
+        return true;
+      }
     }
   }
   return false;
